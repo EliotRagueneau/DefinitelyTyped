@@ -1,4 +1,4 @@
-// Type definitions for complexviewer 2.1
+// Type definitions for complexviewer 2.2
 // Project: https://github.com/MICommunity/ComplexViewer
 // Definitions by: EliotRagueneau <https://github.com/EliotRagueneau>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -208,16 +208,16 @@ export interface ParticipantData {
     expRole: ExpRole;
     identificationMethods: IdentificationMethod[];
     features: Feature[];
+    identifier: Identifier;
 }
 
 export interface Participant {
-    object: 'interactor' | 'interaction';
+    object?: 'interactor' | 'interaction';
     interactorRef: string;
     id: string;
     sequence: string;
     type: Type;
     organism: Organism;
-    identifier: Identifier;
     label: string;
     interactionType: InteractionType;
     experiment: Experiment;
